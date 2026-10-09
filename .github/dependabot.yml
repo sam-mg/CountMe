@@ -5,6 +5,10 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    ignore:
+      # OkHttp 5 renames the mock server package and artifact; migrating the tests is a deliberate task.
+      - dependency-name: "com.squareup.okhttp3:mockwebserver"
+        update-types: ["version-update:semver-major"]
     groups:
       androidx:
         patterns: ["androidx.*"]

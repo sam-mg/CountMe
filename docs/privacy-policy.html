@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="How the CountMe attendance tracker handles your data: stored on your device and in your own Google Drive, never on developer servers.">
+  <title>Privacy Policy · CountMe</title>
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="logo.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site"><a href="index.html"><img src="logo.png" alt="" width="40" height="40">CountMe</a></header>
+<main id="content">
+<article>
+<h1>Privacy Policy</h1>
+<p class="meta">CountMe · Effective date: 9 October 2026</p>
+<nav class="toc" aria-label="Contents"><details><summary>Contents</summary><ol><li><a href="#who-we-are">Who we are</a></li><li><a href="#summary-of-the-data-the-app-handles">Summary of the data the app handles</a></li><li><a href="#google-user-data">Google user data</a></li><li><a href="#how-your-data-is-stored-and-protected">How your data is stored and protected</a></li><li><a href="#sharing-and-disclosure">Sharing and disclosure</a></li><li><a href="#retention-and-deletion">Retention and deletion</a></li><li><a href="#your-rights-and-choices">Your rights and choices</a></li><li><a href="#children">Children</a></li><li><a href="#changes-to-this-policy">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></details></nav>
+
+<p class="lead">This policy explains what information the <strong>CountMe</strong> Android app (the "app") handles, why, where it is stored, and the choices you have. In short: <strong>your attendance data stays on your device and in your own Google Drive. The developer runs no servers and cannot access your data.</strong></p>
+
+<h2 id="who-we-are">1. Who we are</h2>
+<p>CountMe is an attendance tracker developed and maintained by <a href="https://github.com/sam-mg">sam-mg</a> ("we", "us"). It is available at <a href="index.html">this website</a>. You can reach us through <a href="https://github.com/sam-mg/CountMe/issues">github.com/sam-mg/CountMe/issues</a>.</p>
+
+<h2 id="summary-of-the-data-the-app-handles">2. Summary of the data the app handles</h2>
+<table>
+  <thead>
+    <tr><th scope="col">Data</th><th scope="col">Why the app needs it</th><th scope="col">Where it is stored</th><th scope="col">Shared with us?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Attendance records you enter: subject names, codes, categories, target percentages, present/absent counts, history entries and notes</td><td>To show your attendance percentage and to calculate how many classes you can miss or must attend</td><td>On your device. A copy in your Google Drive if you sign in</td><td>No</td></tr>
+    <tr><td>Google account name and email address (only if you sign in)</td><td>To show which account is connected in Settings</td><td>On your device only</td><td>No</td></tr>
+    <tr><td>Google access token (only if you sign in)</td><td>To let the app read and write its own folder in your Drive</td><td>Managed by Google Play services on your device</td><td>No</td></tr>
+    <tr><td>App preferences: dark mode and sync frequency</td><td>To remember your settings</td><td>On your device only</td><td>No</td></tr>
+  </tbody>
+</table>
+<p>The app does not collect your location, contacts, photos, files, device identifiers or advertising identifiers. It contains no analytics, advertising or tracking libraries.</p>
+
+<h2 id="google-user-data">3. Google user data</h2>
+<p>Signing in with Google is optional. The app works fully without it, with data stored only on your device.</p>
+<p>If you sign in, the app requests this Google API scope:</p>
+<ul>
+  <li><code>https://www.googleapis.com/auth/drive.file</code>: lets the app create, read and update <em>only the files and folders that the app itself created</em> in your Google Drive. It does not allow access to any other file in your Drive.</li>
+</ul>
+<p>What the app does with it:</p>
+<ul>
+  <li>Creates a folder named <em>CountMe</em> in your Drive and keeps one readable JSON file there, containing your attendance records, so they sync between your devices and survive a lost phone.</li>
+  <li>If you choose "Export to Google Drive", saves the exported JSON, CSV or PDF file in <em>CountMe/Exports</em>.</li>
+  <li>Reads your account display name and email address from Google (through the Drive "about" information) to show you which account is connected.</li>
+</ul>
+<p>The app uses this data only to provide and improve these user-facing features. We do not use it for advertising, we do not sell it, we do not transfer it to anyone except as needed to provide the feature to you, and no human reads it. We do not use Google user data to develop, improve or train generative AI or machine-learning models.</p>
+<p>CountMe's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2 id="how-your-data-is-stored-and-protected">4. How your data is stored and protected</h2>
+<ul>
+  <li><strong>On your device:</strong> in the app's private storage, which other apps cannot read. It is excluded from Android automatic cloud backup.</li>
+  <li><strong>In your Google Drive:</strong> in a folder that belongs to your own Google account. You can open, download, edit or delete these files in Drive at any time. Google protects them under its own security and privacy terms.</li>
+  <li><strong>In transit:</strong> all communication with Google uses encrypted HTTPS connections.</li>
+  <li>The developer operates no server or database, so there is no developer-side copy of your data to protect, lose or leak.</li>
+</ul>
+
+<h2 id="sharing-and-disclosure">5. Sharing and disclosure</h2>
+<p>We do not sell, rent, trade or share your personal data. The only place your data goes is your own Google Drive, and any location you choose when you export a file. We may disclose information only if the law requires it, but because we hold no user data, we have nothing to disclose.</p>
+
+<h2 id="retention-and-deletion">6. Retention and deletion</h2>
+<ul>
+  <li>Your data is kept for as long as you keep the app installed or keep the files in your Drive. We do not set a retention period of our own because we do not hold your data.</li>
+  <li><strong>Delete all subjects</strong> (Settings) removes every subject and its history from your device and, if you are signed in, updates the Drive copy to match.</li>
+  <li><strong>Sign out</strong> (Settings) removes the local copy and disconnects the account. The files in your Drive stay until you delete them.</li>
+  <li>To remove everything: delete the <em>CountMe</em> folder in Google Drive, revoke the app's access in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a>, then uninstall the app.</li>
+</ul>
+
+<h2 id="your-rights-and-choices">7. Your rights and choices</h2>
+<p>You are in control of your data at all times. You can view, correct and delete it in the app, export it as JSON, CSV or PDF, and manage or revoke Google access from your Google Account. Because we do not hold or process your data on our systems, requests for access, correction or deletion are fulfilled through the controls above. If you are covered by laws such as the GDPR or India's Digital Personal Data Protection Act and want help exercising a right, contact us using the details below.</p>
+
+<h2 id="children">8. Children</h2>
+<p>CountMe is a general-purpose tool and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+<h2 id="changes-to-this-policy">9. Changes to this policy</h2>
+<p>If this policy changes, we will publish the updated version at this address and change the effective date above. If a change affects how Google user data is used, we will ask for your consent in the app before it takes effect.</p>
+
+<h2 id="contact">10. Contact</h2>
+<p>Questions, requests or concerns about this policy: open an issue at <a href="https://github.com/sam-mg/CountMe/issues">github.com/sam-mg/CountMe/issues</a>.</p>
+</article>
+</main>
+<footer class="site">
+  <a href="index.html">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a>
+</footer>
+</body>
+</html>

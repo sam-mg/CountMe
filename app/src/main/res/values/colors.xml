@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand -->
+    <color name="primary">#FF3F51B5</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="primary_dark">#FF1A237E</color>
+    <color name="primary_container">#FFE8EBFF</color>
+    <color name="hero_bg">#FF3F51B5</color>
+
+    <!-- Surfaces -->
+    <color name="bg_screen">#FFF3F5F9</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_high">#FFFFFFFF</color>
+    <color name="on_surface">#FF151823</color>
+    <color name="on_surface_variant">#FF5B6275</color>
+    <color name="outline_variant">#FFE3E6EE</color>
+    <color name="badge_bg">#FFE8EBFF</color>
+
+    <!-- Status: text colors keep >= 4.5:1 on white; *_bg are tinted fills -->
+    <color name="status_green">#FF0F7B55</color>
+    <color name="status_green_bg">#FFE1F5EC</color>
+    <color name="status_orange">#FFB45309</color>
+    <color name="status_red">#FFC62828</color>
+    <color name="status_red_bg">#FFFCE4E4</color>
 </resources>

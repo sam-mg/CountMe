@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      androidx:
+        patterns: ["androidx.*"]
+      static-analysis:
+        patterns:
+          - "com.puppycrawl.tools:*"
+          - "net.sourceforge.pmd:*"
+          - "com.github.spotbugs*"
+          - "com.google.errorprone*"
+          - "net.ltgt.errorprone*"
+          - "com.diffplug.spotless*"
+      testing:
+        patterns: ["org.robolectric*", "com.squareup.okhttp3:mockwebserver*", "junit*"]
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]

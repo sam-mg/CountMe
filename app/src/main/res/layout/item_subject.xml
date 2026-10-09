@@ -4,17 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="12dp"
-    android:layout_marginVertical="6dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
-    app:strokeWidth="1dp">
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="18dp">
 
         <!-- Top Header: Subject Title & Code + Options -->
         <RelativeLayout
@@ -62,7 +59,7 @@
                         android:background="@drawable/bg_category_badge"
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="2dp"
-                        android:textColor="@color/primary_dark"
+                        android:textColor="?attr/colorOnPrimaryContainer"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:text="Core" />
@@ -78,7 +75,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:textColor="@color/status_green"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="90%" />
 
@@ -90,21 +87,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:trackCornerRadius="4dp"
-            app:trackThickness="8dp"
+            app:trackColor="?attr/colorOutlineVariant"
+            app:trackCornerRadius="3dp"
+            app:trackThickness="6dp"
             tools:progress="90" />
 
         <!-- Sub-details: Classes Count & Status message -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvClassesCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="13sp"
                 tools:text="18 / 20 Classes Attended" />
@@ -113,13 +111,13 @@
                 android:id="@+id/tvStatusAdvice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp"
                 android:textColor="@color/status_green"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:text="Safe to miss 2 classes" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <!-- Action Buttons -->
         <LinearLayout
@@ -134,26 +132,26 @@
                 style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginEnd="6dp"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:text="@string/present"
                 android:textColor="@color/status_green"
                 android:textSize="14sp"
                 app:backgroundTint="@color/status_green_bg"
-                app:cornerRadius="12dp" />
+                app:cornerRadius="14dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnMarkAbsent"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginEnd="6dp"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 android:text="@string/absent"
                 android:textColor="@color/status_red"
                 android:textSize="14sp"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/status_red" />
+                app:backgroundTint="@color/status_red_bg"
+                app:cornerRadius="14dp" />
 
             <ImageButton
                 android:id="@+id/btnMoreOptions"
@@ -161,7 +159,7 @@
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/edit_subject"
-                android:src="@android:drawable/ic_menu_more"
+                android:src="@drawable/ic_more_vert"
                 app:tint="?attr/colorOnSurfaceVariant" />
 
         </LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FFAEB8F5</color>
+    <color name="on_primary">#FF1A1F4D</color>
+    <color name="primary_dark">#FFDDE1FF</color>
+    <color name="primary_container">#FF2B3366</color>
+    <color name="hero_bg">#FF2F3A7A</color>
+
+    <color name="bg_screen">#FF0F121A</color>
+    <color name="surface">#FF1B1F2B</color>
+    <color name="surface_high">#FF232838</color>
+    <color name="on_surface">#FFE6E8F0</color>
+    <color name="on_surface_variant">#FFA3A9BA</color>
+    <color name="outline_variant">#FF2C3142</color>
+    <color name="badge_bg">#FF2B3366</color>
+
+    <color name="status_green">#FF4ADE9E</color>
+    <color name="status_green_bg">#FF123026</color>
+    <color name="status_orange">#FFFBBF24</color>
+    <color name="status_red">#FFFF8A8E</color>
+    <color name="status_red_bg">#FF3A1618</color>
+</resources>

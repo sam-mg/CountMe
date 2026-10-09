@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!-- Generated code -->
+  <Match><Class name="~.*\.R(\$.*)?"/></Match>
+  <Match><Class name="~.*\.BuildConfig"/></Match>
+  <!-- Android components are created and wired by the framework, not by our constructors -->
+  <Match><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
+  <!-- Singletons by design: Application-scoped managers with a guarded static instance -->
+  <Match><Bug pattern="MS_EXPOSE_REP"/></Match>
+  <!-- findViewById() is generic; SpotBugs reads its inferred cast as unchecked -->
+  <Match><Bug pattern="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE"/></Match>
+  <!-- SyncManager's package-private constructor is a deliberate test seam -->
+  <Match>
+    <Class name="com.jd_s4nd_b0x.CountMe.drive.SyncManager"/>
+    <Bug pattern="SING_SINGLETON_HAS_NONPRIVATE_CONSTRUCTOR"/>
+  </Match>
+</FindBugsFilter>

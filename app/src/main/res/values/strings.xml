@@ -1,3 +1,102 @@
 <resources>
     <string name="app_name">CountMe</string>
+    <string name="overall_attendance">Overall attendance</string>
+    <string name="search_subjects">Search subjects</string>
+    <string name="no_subjects">No subjects yet. Tap “Add subject” to start.</string>
+    <string name="add_subject">Add subject</string>
+    <string name="edit_subject">Edit subject</string>
+    <string name="delete_subject">Delete subject</string>
+    <string name="subject_name">Subject name</string>
+    <string name="subject_code">Subject code (optional)</string>
+    <string name="category">Category</string>
+    <string name="target_percentage">Target attendance %</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="reset">Remove entry</string>
+    <string name="history_log">History</string>
+    <string name="status_on_track">On track. Keep attending.</string>
+    <string name="category_all">All</string>
+    <plurals name="overall_status">
+        <item quantity="one">%1$d of %2$d subject on track</item>
+        <item quantity="other">%1$d of %2$d subjects on track</item>
+    </plurals>
+
+    <!-- Account / Drive -->
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="sign_out">Sign out</string>
+    <string name="sync_now">Sync now</string>
+    <string name="sync_idle">Synced to your Google Drive</string>
+    <string name="sync_running">Syncing…</string>
+    <string name="sync_failed">Sync failed. Will retry on next change.</string>
+    <string name="sign_in_failed">Google sign-in failed</string>
+    <string name="sign_out_confirm">Sign out? Local copy is removed from this device. Your data stays in Google Drive (CountMe folder) and returns when you sign in again.</string>
+    <string name="drive_privacy_note">Your data is stored only in your own Google Drive, in the “CountMe” folder. The developer has no access to it.</string>
+
+    <!-- Export -->
+    <string name="export_data">Export data</string>
+    <string name="export_json">JSON</string>
+    <string name="export_csv">CSV</string>
+    <string name="export_pdf">PDF</string>
+    <string name="export_where">Where to save?</string>
+    <string name="export_device">This device / pick location</string>
+    <string name="export_drive">Google Drive (CountMe/Exports)</string>
+    <string name="export_done">Export saved</string>
+    <string name="export_failed">Export failed</string>
+    <string name="export_drive_needs_signin">Sign in with Google to export to Drive</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="settings_account">Google account</string>
+    <string name="settings_sync_frequency">Sync frequency</string>
+    <string name="settings_export">Export entire report</string>
+    <string name="settings_export_sub">JSON, CSV or PDF</string>
+    <string name="settings_delete_all">Delete all subjects</string>
+    <string name="settings_delete_all_sub">Removes every subject and its history</string>
+    <string name="delete_all_confirm">Delete all subjects and attendance history? If signed in, the Drive copy is updated too.</string>
+    <string name="delete_all_done">All subjects deleted</string>
+    <string name="sync_every_change">After every change</string>
+    <string name="sync_15m">Every 15 minutes</string>
+    <string name="sync_hourly">Hourly</string>
+    <string name="sync_daily">Daily</string>
+    <string name="sync_manual">Manual only</string>
+    <string name="settings_dark_mode">Dark mode</string>
+    <string name="settings_dark_mode_sub">Saved on this device only</string>
+    <string name="category_add_new">+ Add new category…</string>
+    <string name="category_new_title">New category</string>
+    <string name="category_new_hint">Category name</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+
+    <plurals name="safe_miss">
+        <item quantity="one">You can safely miss %1$d more class</item>
+        <item quantity="other">You can safely miss %1$d more classes</item>
+    </plurals>
+    <plurals name="must_attend">
+        <item quantity="one">Attend %1$d more class in a row to reach %2$d%%</item>
+        <item quantity="other">Attend %1$d more classes in a row to reach %2$d%%</item>
+    </plurals>
+    <string name="account_status">%1$s\n%2$s</string>
+    <string name="app_tagline">Your attendance tracker</string>
+    <string name="reports">Reports</string>
+    <string name="reports_title">Attendance reports</string>
+    <string name="reports_summary_title">Overall attendance summary</string>
+    <string name="overall_percent_label">Overall %</string>
+    <string name="total_attended">Total attended</string>
+    <string name="total_missed">Total missed</string>
+    <string name="summary_by_subject">Summary by subject</string>
+    <string name="history_by_date">Attendance history by date</string>
+    <string name="no_logs">No logs recorded yet.</string>
+    <string name="attended">Attended</string>
+    <string name="missed">Missed</string>
+    <string name="total">Total</string>
+    <string name="btn_plus_present">+ Present</string>
+    <string name="btn_minus_absent">- Absent</string>
+    <string name="no_activity_logged">No activity log recorded yet.</string>
+    <string name="initial_attended">Initial attended</string>
+    <string name="total_classes">Total classes</string>
+    <string name="log_removed">Log entry removed.</string>
+    <string name="log_manual_entry">Manual entry</string>
+    <string name="log_report_mark">Report mark</string>
+    <string name="class_counts">Attended %1$d • Missed %2$d • Total %3$d</string>
+    <string name="log_subject_date">%1$s • %2$s</string>
 </resources>

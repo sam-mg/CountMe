@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# Refuses a push unless every quality gate passes: secrets scan, workflow/shell lint, HTML checks,
+# and the full Gradle gate (format, Checkstyle, PMD, SpotBugs, lint, tests + coverage, builds).
+# Enable it once per clone with:  scripts/install_hooks.sh
+#
+# A hook can be bypassed with --no-verify. CI runs the same gates and branch protection requires
+# them, so a bypassed push still cannot reach main.
+
+set -uo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root" || exit 1
+
+if ! scripts/preflight.sh; then
+    printf '\npush refused. Fix the failures above, then push again.\n'
+    printf 'Re-run the same checks with: scripts/preflight.sh\n'
+    exit 1
+fi
+exit 0

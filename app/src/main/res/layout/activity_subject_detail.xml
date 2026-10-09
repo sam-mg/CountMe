@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/detailMainLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg_screen">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@android:drawable/ic_menu_revert"
+            app:navigationIcon="@drawable/ic_arrow_back"
             app:title="Subject Details" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -90,6 +89,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
+                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
                         <!-- Attended -->
@@ -116,7 +116,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Attended"
+                                android:text="@string/attended"
                                 android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
 
@@ -146,7 +146,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Missed"
+                                android:text="@string/missed"
                                 android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
 
@@ -176,7 +176,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Total"
+                                android:text="@string/total"
                                 android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
 
@@ -212,7 +212,7 @@
                             android:layout_height="52dp"
                             android:layout_marginEnd="8dp"
                             android:layout_weight="1"
-                            android:text="+ Present"
+                            android:text="@string/btn_plus_present"
                             android:textColor="@color/status_green"
                             android:textSize="15sp"
                             app:backgroundTint="@color/status_green_bg"
@@ -224,7 +224,7 @@
                             android:layout_width="0dp"
                             android:layout_height="52dp"
                             android:layout_weight="1"
-                            android:text="- Absent"
+                            android:text="@string/btn_minus_absent"
                             android:textColor="@color/status_red"
                             android:textSize="15sp"
                             app:cornerRadius="12dp"
@@ -275,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="24dp"
-                        android:text="No activity log recorded yet."
+                        android:text="@string/no_activity_logged"
                         android:textColor="?attr/colorOnSurfaceVariant"
                         android:visibility="gone" />
 

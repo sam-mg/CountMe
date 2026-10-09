@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single-colour silhouette used for Android 13+ themed icons: three people, one marked present. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:pivotX="54"
+        android:pivotY="54">
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M54,30m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0M38,66c0,-9 7,-16 16,-16s16,7 16,16v10H38z" />
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M24,42m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0M10,72c0,-8 6,-14 14,-14s14,6 14,14v6H10z" />
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M84,42m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0M70,72c0,-8 6,-14 14,-14s14,6 14,14v6H70z" />
+    </group>
+</vector>

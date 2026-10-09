@@ -38,3 +38,9 @@ google-services.json
 # Android Profiling
 *.hprof
 .DS_Store
+
+# Secrets / OAuth downloads (app does not need them at runtime)
+keystore.properties
+client_secret_*.json
+*.jks
+*.keystore

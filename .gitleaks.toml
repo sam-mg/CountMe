@@ -1,0 +1,8 @@
+title = "CountMe gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Template with intentionally empty values"
+paths = ['''keystore\.properties\.example$''']

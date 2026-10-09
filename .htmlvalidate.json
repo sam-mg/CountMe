@@ -1,0 +1,12 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-trailing-whitespace": "error",
+    "doctype-style": ["error", { "style": "lowercase" }],
+    "void-style": ["error", { "style": "omit" }],
+    "attribute-boolean-style": "error",
+    "no-inline-style": "error",
+    "prefer-native-element": "error",
+    "require-sri": "off"
+  }
+}

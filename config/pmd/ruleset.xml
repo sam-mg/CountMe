@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ruleset name="CountMe"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+  <description>Strict PMD rules for CountMe. Suppressions must carry a justification in code.</description>
+
+  <rule ref="category/java/bestpractices.xml">
+    <exclude name="LooseCoupling"/>              <!-- Android APIs hand out concrete types -->
+    <exclude name="GuardLogStatement"/>
+    <exclude name="SystemPrintln"/>
+    <exclude name="UseVarargs"/>                  <!-- arrays are fine in Android listener APIs -->
+    <exclude name="PreserveStackTrace"/>
+    <exclude name="UnitTestContainsTooManyAsserts"/>
+    <exclude name="UnitTestShouldIncludeAssert"/>
+    <exclude name="MissingOverride"/>
+  </rule>
+  <rule ref="category/java/errorprone.xml">
+    <exclude name="MissingSerialVersionUID"/>
+    <exclude name="AvoidFieldNameMatchingMethodName"/>
+    <exclude name="NullAssignment"/>
+    <exclude name="AssignmentInOperand"/>
+    <exclude name="ReturnEmptyCollectionRatherThanNull"/>
+    <exclude name="CloseResource"/>
+    <exclude name="AvoidCatchingGenericException"/>
+    <exclude name="AvoidLiteralsInIfCondition"/>
+    <exclude name="AvoidDuplicateLiterals"/>
+    <exclude name="InvalidLogMessageFormat"/>               <!-- try-with-resources is verified by Error Prone/SpotBugs -->
+  </rule>
+  <rule ref="category/java/security.xml"/>
+  <rule ref="category/java/multithreading.xml">
+    <exclude name="DoNotUseThreads"/>
+    <exclude name="AvoidSynchronizedAtMethodLevel"/>
+    <exclude name="UseConcurrentHashMap"/>
+    <exclude name="AvoidUsingVolatile"/>
+    <exclude name="AvoidSynchronizedStatement"/>
+  </rule>
+  <rule ref="category/java/performance.xml">
+    <exclude name="AvoidInstantiatingObjectsInLoops"/>
+    <exclude name="ConsecutiveLiteralAppends"/>
+    <exclude name="InsufficientStringBufferDeclaration"/>
+    <exclude name="ConsecutiveAppendsShouldReuse"/>
+  </rule>
+  <rule ref="category/java/design.xml">
+    <exclude name="LawOfDemeter"/>
+    <exclude name="LoosePackageCoupling"/>
+    <exclude name="DataClass"/>
+    <exclude name="TooManyMethods"/>
+    <exclude name="TooManyFields"/>
+    <exclude name="CouplingBetweenObjects"/>
+    <exclude name="ExcessiveImports"/>
+    <exclude name="GodClass"/>
+    <exclude name="SignatureDeclareThrowsException"/>
+    <exclude name="AvoidThrowingRawExceptionTypes"/>
+    <exclude name="CognitiveComplexity"/>
+    <exclude name="NPathComplexity"/>
+    <exclude name="CyclomaticComplexity"/>
+    <exclude name="ExcessiveParameterList"/>
+    <exclude name="ImmutableField"/>
+    <exclude name="AvoidCatchingGenericException"/>
+    <exclude name="ExceptionAsFlowControl"/>
+  </rule>
+  <rule ref="category/java/codestyle.xml">
+    <exclude name="OnlyOneReturn"/>
+    <exclude name="AtLeastOneConstructor"/>
+    <exclude name="CommentDefaultAccessModifier"/>
+    <exclude name="LocalVariableCouldBeFinal"/>
+    <exclude name="MethodArgumentCouldBeFinal"/>
+    <exclude name="ShortVariable"/>
+    <exclude name="LongVariable"/>
+    <exclude name="ShortClassName"/>
+    <exclude name="ShortMethodName"/>
+    <exclude name="UnnecessaryFullyQualifiedName"/>
+    <exclude name="PrematureDeclaration"/>
+    <exclude name="LinguisticNaming"/>
+    <exclude name="ControlStatementBraces"/>
+    <exclude name="UselessParentheses"/>
+    <exclude name="FieldDeclarationsShouldBeAtStartOfClass"/>
+    <exclude name="ClassNamingConventions"/>
+    <exclude name="CallSuperInConstructor"/>
+    <exclude name="UnnecessaryConstructor"/>
+    <exclude name="UnnecessaryLocalBeforeReturn"/>
+    <exclude name="UnnecessaryAnnotationValueElement"/>
+    <exclude name="TooManyStaticImports"/>
+    <exclude name="UseUnderscoresInNumericLiterals"/>
+    <exclude name="FieldNamingConventions"/>
+    <exclude name="FormalParameterNamingConventions"/>
+    <exclude name="LocalVariableNamingConventions"/>
+    <exclude name="GenericsNaming"/>
+    <exclude name="PackageCase"/>
+    <exclude name="EmptyControlStatement"/>
+  </rule>
+</ruleset>

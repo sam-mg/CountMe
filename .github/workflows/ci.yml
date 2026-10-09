@@ -28,7 +28,7 @@ env:
 jobs:
   wrapper:
     name: Gradle wrapper integrity
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -38,7 +38,7 @@ jobs:
 
   secrets:
     name: Secret scan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -58,7 +58,7 @@ jobs:
 
   meta:
     name: Workflows, shell scripts, HTML
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -72,7 +72,7 @@ jobs:
 
   static:
     name: Format, Checkstyle, PMD, SpotBugs, lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:
       contents: read
@@ -108,17 +108,10 @@ jobs:
         with:
           sarif_file: app/build/reports/lint-results-debug.sarif
           category: android-lint
-      - name: Publish SpotBugs findings to code scanning
-        if: always() && github.event_name != 'pull_request'
-        continue-on-error: true
-        uses: github/codeql-action/upload-sarif@24c54180a607b1449ed407dd24f251e4e9147c8d # v4.38.3
-        with:
-          sarif_file: app/build/reports/spotbugs/debug.sarif
-          category: spotbugs
 
   tests:
     name: Unit tests and coverage gate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -145,7 +138,7 @@ jobs:
 
   build:
     name: Debug and release builds
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -173,7 +166,7 @@ jobs:
 
   codeql:
     name: CodeQL (security-extended)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     permissions:
       contents: read
@@ -203,7 +196,7 @@ jobs:
   dependency-review:
     name: Dependency review
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -215,7 +208,7 @@ jobs:
 
   instrumented:
     name: Instrumented tests (emulator, informational)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     continue-on-error: true # emulators are flaky; the PDF test also passes on a real device locally
     steps:
@@ -248,7 +241,7 @@ jobs:
     # was skipped unexpectedly, so branch protection only needs to know this one name.
     if: always()
     needs: [wrapper, secrets, meta, static, tests, build, codeql, dependency-review]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Require every gating job to have succeeded

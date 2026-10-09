@@ -33,7 +33,7 @@ jobs:
   release:
     name: Build, sign and publish
     needs: verify
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     environment: release
     permissions:

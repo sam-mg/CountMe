@@ -238,7 +238,6 @@ spotbugs {
 tasks.withType<com.github.spotbugs.snom.SpotBugsTask>().configureEach {
     reports.create("xml") { required.set(true) }
     reports.create("html") { required.set(true) }
-    reports.create("sarif") { required.set(true) } // uploaded to GitHub code scanning by CI
 }
 
 val spotbugsVerify by tasks.registering {

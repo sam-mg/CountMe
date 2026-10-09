@@ -145,7 +145,7 @@ public class SyncManagerTest {
         sync.setListener(
                 new SyncManager.Listener() {
                     @Override
-                    public void onSyncState(SyncManager.State state) {
+                    public void onSyncStateChanged() {
                         // state changes are asserted through the return value
                     }
 

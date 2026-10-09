@@ -42,8 +42,8 @@ public final class SyncManager {
     }
 
     public interface Listener {
-        /** Called on the main thread. */
-        void onSyncState(State state);
+        /** Called on the main thread whenever {@link #getState()} changed. */
+        void onSyncStateChanged();
 
         /** Called on the main thread when remote data replaced local data. */
         void onRemoteApplied();
@@ -112,7 +112,7 @@ public final class SyncManager {
     public void setListener(Listener l) {
         this.listener = l;
         if (l != null) {
-            l.onSyncState(state);
+            l.onSyncStateChanged();
         }
     }
 
@@ -321,7 +321,7 @@ public final class SyncManager {
                 () -> {
                     Listener l = listener;
                     if (l != null) {
-                        l.onSyncState(s);
+                        l.onSyncStateChanged();
                     }
                 });
     }

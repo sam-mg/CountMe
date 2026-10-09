@@ -83,27 +83,27 @@ public class MainActivity extends AppCompatActivity implements SyncManager.Liste
                 new SubjectAdapter(
                         new SubjectAdapter.OnSubjectActionListener() {
                             @Override
-                            public void onMarkPresent(Subject subject, int position) {
+                            public void onMarkPresent(Subject subject) {
                                 mark(subject, AttendanceLog.Status.PRESENT);
                             }
 
                             @Override
-                            public void onMarkAbsent(Subject subject, int position) {
+                            public void onMarkAbsent(Subject subject) {
                                 mark(subject, AttendanceLog.Status.ABSENT);
                             }
 
                             @Override
-                            public void onItemClick(Subject subject, int position) {
+                            public void onItemClick(Subject subject) {
                                 SubjectDetailActivity.start(MainActivity.this, subject.getId());
                             }
 
                             @Override
-                            public void onEditSubject(Subject subject, int position) {
+                            public void onEditSubject(Subject subject) {
                                 showSubjectDialog(subject);
                             }
 
                             @Override
-                            public void onDeleteSubject(Subject subject, int position) {
+                            public void onDeleteSubject(Subject subject) {
                                 new MaterialAlertDialogBuilder(MainActivity.this)
                                         .setTitle(R.string.delete_subject)
                                         .setMessage(subject.getName())
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements SyncManager.Liste
     }
 
     @Override
-    public void onSyncState(SyncManager.State state) {}
+    public void onSyncStateChanged() {}
 
     @Override
     public void onRemoteApplied() {

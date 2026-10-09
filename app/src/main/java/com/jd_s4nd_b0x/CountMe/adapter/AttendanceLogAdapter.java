@@ -23,7 +23,7 @@ public class AttendanceLogAdapter extends RecyclerView.Adapter<AttendanceLogAdap
 
     @FunctionalInterface
     public interface OnLogDeleteListener {
-        void onDeleteLog(AttendanceLog log, int position);
+        void onDeleteLog(AttendanceLog log);
     }
 
     private List<AttendanceLog> logs = new ArrayList<>();
@@ -84,7 +84,7 @@ public class AttendanceLogAdapter extends RecyclerView.Adapter<AttendanceLogAdap
         holder.btnDeleteLog.setOnClickListener(
                 v -> {
                     if (listener != null) {
-                        listener.onDeleteLog(log, holder.getBindingAdapterPosition());
+                        listener.onDeleteLog(log);
                     }
                 });
     }

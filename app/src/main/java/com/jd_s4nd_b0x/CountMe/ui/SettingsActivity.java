@@ -188,7 +188,7 @@ public class SettingsActivity extends AppCompatActivity implements SyncManager.L
     }
 
     @Override
-    public void onSyncState(SyncManager.State state) {
+    public void onSyncStateChanged() {
         updateSummaries();
     }
 

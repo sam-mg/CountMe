@@ -26,15 +26,15 @@ import java.util.Locale;
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder> {
 
     public interface OnSubjectActionListener {
-        void onMarkPresent(Subject subject, int position);
+        void onMarkPresent(Subject subject);
 
-        void onMarkAbsent(Subject subject, int position);
+        void onMarkAbsent(Subject subject);
 
-        void onItemClick(Subject subject, int position);
+        void onItemClick(Subject subject);
 
-        void onEditSubject(Subject subject, int position);
+        void onEditSubject(Subject subject);
 
-        void onDeleteSubject(Subject subject, int position);
+        void onDeleteSubject(Subject subject);
     }
 
     private List<Subject> subjects = new ArrayList<>();
@@ -143,19 +143,19 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         holder.btnMarkPresent.setOnClickListener(
                 v -> {
                     if (listener != null) {
-                        listener.onMarkPresent(subject, holder.getBindingAdapterPosition());
+                        listener.onMarkPresent(subject);
                     }
                 });
         holder.btnMarkAbsent.setOnClickListener(
                 v -> {
                     if (listener != null) {
-                        listener.onMarkAbsent(subject, holder.getBindingAdapterPosition());
+                        listener.onMarkAbsent(subject);
                     }
                 });
         holder.itemView.setOnClickListener(
                 v -> {
                     if (listener != null) {
-                        listener.onItemClick(subject, holder.getBindingAdapterPosition());
+                        listener.onItemClick(subject);
                     }
                 });
         holder.btnMoreOptions.setOnClickListener(v -> showMenu(holder, subject, context));
@@ -170,13 +170,12 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
                     if (listener == null) {
                         return false;
                     }
-                    int pos = holder.getBindingAdapterPosition();
                     if (item.getItemId() == R.string.edit_subject) {
-                        listener.onEditSubject(subject, pos);
+                        listener.onEditSubject(subject);
                         return true;
                     }
                     if (item.getItemId() == R.string.delete_subject) {
-                        listener.onDeleteSubject(subject, pos);
+                        listener.onDeleteSubject(subject);
                         return true;
                     }
                     return false;

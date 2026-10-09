@@ -112,27 +112,27 @@ public class ReportsActivity extends AppCompatActivity {
     /** Row actions on the reports list; edit and delete live on the home screen. */
     private final class ReportActions implements SubjectAdapter.OnSubjectActionListener {
         @Override
-        public void onMarkPresent(Subject subject, int position) {
+        public void onMarkPresent(Subject subject) {
             markFromReport(subject, AttendanceLog.Status.PRESENT);
         }
 
         @Override
-        public void onMarkAbsent(Subject subject, int position) {
+        public void onMarkAbsent(Subject subject) {
             markFromReport(subject, AttendanceLog.Status.ABSENT);
         }
 
         @Override
-        public void onItemClick(Subject subject, int position) {
+        public void onItemClick(Subject subject) {
             SubjectDetailActivity.start(ReportsActivity.this, subject.getId());
         }
 
         @Override
-        public void onEditSubject(Subject subject, int position) {
+        public void onEditSubject(Subject subject) {
             // Handled in MainActivity
         }
 
         @Override
-        public void onDeleteSubject(Subject subject, int position) {
+        public void onDeleteSubject(Subject subject) {
             // Handled in MainActivity
         }
     }

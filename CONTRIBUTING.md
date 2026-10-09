@@ -12,10 +12,12 @@ same scripts, so a failure is always reproducible on your machine.
 ## One-time setup
 
 ```sh
-scripts/install_hooks.sh          # enable the pre-push hook
-brew install actionlint shellcheck gitleaks   # local copies of the CI linters
-scripts/protect_main.sh           # (repo admin) turn on branch protection
+git config core.hooksPath .githooks            # enable the pre-push hook
+brew install actionlint shellcheck gitleaks    # local copies of the CI linters
 ```
+
+`main` is protected on GitHub: changes arrive through a pull request, the **CI passed** check must be
+green, history stays linear, force-pushes are blocked and `v*` tags are immutable.
 
 ## The gates
 

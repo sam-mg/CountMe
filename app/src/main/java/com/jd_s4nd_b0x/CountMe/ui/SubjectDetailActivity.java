@@ -108,7 +108,7 @@ public class SubjectDetailActivity extends AppCompatActivity {
 
         logAdapter =
                 new AttendanceLogAdapter(
-                        (log, position) -> {
+                        log -> {
                             repository.deleteLog(log.getId());
                             // Revert subject count if needed
                             boolean wasPresent = log.getStatus() == AttendanceLog.Status.PRESENT;
